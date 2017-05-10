@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/haokan_button_default"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:textSize="14dp"
+            android:text="@string/haokan_title"
+            android:textColor="@color/card_title_color" />
+
+        <LinearLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dp" >
+
+            <ImageButton
+                android:id="@+id/title_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:src="@drawable/card_refresh_drawable" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="#1EFFFFFF"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/haokan_loading"
+            android:visibility="visible" />
+
+        <include
+            android:id="@+id/loading_fail_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/haokan_loading_fail"
+            android:visibility="visible" />
+         
+<!--           <include
+            android:id="@+id/one_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/haokan_onescreen_one_img"
+            android:visibility="gone" />-->
+           
+           <include
+            android:id="@+id/five_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/haokan_onescreen_five_img"
+            android:visibility="gone" />
+         
+        
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#1AFFFFFF"
+        android:gravity="end" >
+
+        <TextView
+            android:id="@+id/buttom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/haokan_more"
+            android:textColor="@color/function_tv_bg"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</LinearLayout>

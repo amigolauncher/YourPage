@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="card_content_text_color">#e6ffffff</color>
+    <color name="card_title_color">#80ffffff</color>
+
+    <color name="card_function_tv_bg_press">#50ffffff</color>
+    <color name="card_function_normal">#80ffffff</color>
+
+    <color name="card_manager_title_bar_color">#80000000</color>
+    <color name="card_manager_title_color">#80000000</color>
+    <color name="card_manager_item_color">#bc000000</color>
+
+
+</resources>

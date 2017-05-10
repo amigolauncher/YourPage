@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:orientation="horizontal" >
+
+    <com.haokan.onescreen.information.view.TopCropImageView
+        android:id="@+id/single_img_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="7dp"
+        android:layout_weight="5.7" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="7dp"
+        android:layout_weight="4.3" >
+
+        <TextView
+            android:id="@+id/single_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#ddffffff"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/single_title"
+            android:layout_marginTop="7dp"
+            android:background="#4DFFFFFF" />
+
+        <LinearLayout
+            android:id="@+id/single_small_img_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal" >
+
+            <com.haokan.onescreen.information.view.TopCropImageView
+                android:id="@+id/single_img_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="match_parent" />
+
+            <com.haokan.onescreen.information.view.TopCropImageView
+                android:id="@+id/single_img_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="match_parent" />
+
+            <com.haokan.onescreen.information.view.TopCropImageView
+                android:id="@+id/single_img_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/single_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/single_small_img_layout"
+            android:layout_below="@+id/view"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/single_img_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="2dp"
+                android:lineSpacingMultiplier="1.1"
+                android:maxHeight="156dp"
+                android:scrollbarFadeDuration="2000"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:text="@string/haokan_tag"
+                android:textColor="#80FFFFFF"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/single_tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/haokan_tag_selector"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/haokan_tag"
+                    android:textColor="#ddffffff"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/single_tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/haokan_tag_selector"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/haokan_tag"
+                    android:textColor="#ddffffff"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

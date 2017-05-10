@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="haokan_bg_default">#80FFFFFF</color>
+    <color name="haokan_progress_text">#66FFFFFF</color>
+    <color name="haokan_button_default">#1AFFFFFF</color>
+    <color name="haokan_button_press">#0DFFFFFF</color>
+    <color name="haokan_button_text_press">#40FFFFFF</color>
+
+</resources>
