@@ -95,6 +95,7 @@ public class OneScreenView extends LinearLayout implements IGioneeCardViewInterf
 	public OneScreenView(Context launcherContext, Context context) {
 		this(context, null, 0);
 		this.mAppContext = launcherContext.getApplicationContext();
+// test commit
 	}
 
 	public OneScreenView(Context context, AttributeSet attrs, int defStyleAttr) {
