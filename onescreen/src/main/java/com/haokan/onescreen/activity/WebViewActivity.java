@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -78,7 +79,7 @@ public class WebViewActivity extends Activity {
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
 				// mWeb_Url = url;
 				// return false;
-
+				Log.d(TAG, "shouldOverrideUrlLoading url = " + url);
 				if (url.startsWith("http") || url.startsWith("https")) {
 					view.loadUrl(url);
 					return true;
@@ -145,6 +146,8 @@ public class WebViewActivity extends Activity {
 
 		if (mWeb_Url.startsWith("http") || mWeb_Url.startsWith("https")) {
 			mWebView.loadUrl(mWeb_Url);
+			Log.d(TAG, "loadUrl url = " + mWeb_Url);
+			Log.d(TAG, "WebSettings getDefaultUserAgent = " + WebSettings.getDefaultUserAgent(this));
 		} else {
 			loadLocalApp(mWeb_Url);
 		}
@@ -170,9 +173,12 @@ public class WebViewActivity extends Activity {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			if (mWebView != null && mWebView.canGoBack()) {
+				Log.d(TAG, "onKeyDown canGoBack = " + mWebView.canGoBack());
+				Log.d(TAG, "onKeyDown canGoBack url = " + mWebView.getUrl());
 				mWebView.goBack();
 				return true;
 			}
+			Log.d(TAG, "onKeyDown finish!");
 			finish();
 			try {
 				Process.killProcess(Process.myPid());
